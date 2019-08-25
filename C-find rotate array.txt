@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int findpivot(int ar[],int n){
+   
+ int i=0;
+    
+for(i;i<n-1;i++){
+       
+if(ar[i]>ar[i+1] ){
+           
+return i;
+           
+       }
+    }
+    
+    
+}
+
+int findrotatetimes(int ar[]){
+    
+int n = (sizeof ar / sizeof *ar); 
+   
+ int pivot=findpivot(ar,n);
+    
+printf("array %d kez dönmü?tür",pivot+1);
+    
+    
+}
+
+
+
+
+int main()
+{
+   
+int ar[] = {15, 18, 2, 3, 6, 12};
+   
+findrotatetimes(ar);
+   
+ return 0;
+}
